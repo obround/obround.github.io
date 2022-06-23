@@ -1,0 +1,21 @@
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+{%- include snippets/assign.html target=site.data.variables.default.mathjax_autoNumber
+  source0=site.mathjax_autoNumber source1=page.mathjax_autoNumber -%}
+{%- assign _mathjax_autoNumber = __return -%}
+
+<script>
+    MathJax = {
+        tex: {
+            processEscapes: true,
+            inlineMath: [['$', '$']]
+	    {%- if _mathjax_autoNumber == true -%}
+	        equationNumbers: { autoNumber: "all" }
+	    {%- endif -%}
+        }
+    };
+</script>
+<script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>

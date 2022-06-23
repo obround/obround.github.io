@@ -1,0 +1,49 @@
+text_skin: default
+highlight_theme: default
+title: /home/obround
+description: Math, computer science, and everything in between
+
+author:
+  bio: I love math and computer science
+  email: obround.dev@gmail.com
+  github: obround
+
+repository: obround/obround.github.io
+repository_tree: main
+
+excerpt_separator: <!--more-->
+
+mathjax: true
+paginate: 10
+
+search:
+  provider: default
+
+analytics:
+  provider: google
+  google:
+    tracking_id: UA-177545877-2
+
+markdown: kramdown
+highlighter: rouge
+permalink: date
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      sharing: true
+      license: false
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_subscribe: true
+      pageview: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
